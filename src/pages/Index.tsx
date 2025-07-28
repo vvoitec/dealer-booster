@@ -24,13 +24,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+      <section 
+        className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="relative z-10 text-center">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white">
             Automate Your Car Dealership
             <span className="text-primary block">Sales & Marketing</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Import cars from OLX automatically, manage Facebook & Google ads, and track leads with our all-in-one platform designed for small to medium car dealerships.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -89,13 +97,21 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 bg-muted/50">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Built for Small & Medium Dealerships</h2>
+      <section 
+        className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="relative z-10 text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4 text-white">Built for Small & Medium Dealerships</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-6">Save Hours Every Week</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
@@ -117,7 +133,7 @@ const Index = () => {
             </ul>
           </div>
           
-          <div className="bg-background p-8 rounded-lg shadow-lg">
+          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-4">Current Pain Points:</h3>
             <div className="space-y-3 text-muted-foreground">
               <p>• Spending hours posting cars manually</p>
