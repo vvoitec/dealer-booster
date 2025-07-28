@@ -14,8 +14,8 @@ const Index = () => {
     e.preventDefault();
     if (email) {
       toast({
-        title: "Thank you for your interest!",
-        description: "We'll notify you when the app is ready for early access.",
+        title: "Dziękujemy za zainteresowanie!",
+        description: "Powiadomimy Cię, gdy aplikacja będzie gotowa do wczesnego dostępu.",
       });
       setEmail("");
     }
@@ -27,28 +27,28 @@ const Index = () => {
       <section 
         className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white">
-            Automate Your Car Dealership
-            <span className="text-primary block">Sales & Marketing</span>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
+            Zautomatyzuj Swoją Komis
+            <span className="text-primary block drop-shadow-lg">Sprzedaż i Marketing</span>
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Import cars from OLX automatically, manage Facebook & Google ads, and track leads with our all-in-one platform designed for small to medium car dealerships.
+          <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
+            Importuj samochody z OLX automatycznie, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej platformie all-in-one zaprojektowanej dla małych i średnich komisów samochodowych.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-lg">
               <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
-                Help Us Build This <ExternalLink className="ml-2 h-4 w-4" />
+                Pomóż Nam To Zbudować <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
-              Join Waiting List
+            <Button variant="outline" size="lg" className="bg-white/90 text-gray-900 border-white hover:bg-white font-semibold shadow-lg" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
+              Dołącz do Listy Oczekujących
             </Button>
           </div>
         </div>
@@ -57,9 +57,9 @@ const Index = () => {
       {/* Features Section */}
       <section className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Everything You Need to Scale Your Dealership</h2>
+          <h2 className="text-3xl font-bold mb-4">Wszystko Czego Potrzebujesz do Skalowania Komisu</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Stop managing multiple platforms. Our integrated solution handles your entire sales funnel.
+            Przestań zarządzać wieloma platformami. Nasze zintegrowane rozwiązanie obsługuje cały Twój lejek sprzedażowy.
           </p>
         </div>
         
@@ -67,9 +67,9 @@ const Index = () => {
           <Card>
             <CardHeader>
               <Car className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Automatic OLX Import</CardTitle>
+              <CardTitle>Automatyczny Import z OLX</CardTitle>
               <CardDescription>
-                Never manually post cars again. Our system automatically imports and syncs your inventory from OLX.
+                Nigdy więcej ręcznego dodawania samochodów. Nasz system automatycznie importuje i synchronizuje Twój inwentarz z OLX.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -77,9 +77,9 @@ const Index = () => {
           <Card>
             <CardHeader>
               <TrendingUp className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Ad Management</CardTitle>
+              <CardTitle>Zarządzanie Reklamami</CardTitle>
               <CardDescription>
-                Create and manage Facebook & Google ads for your cars with automated optimization and performance tracking.
+                Twórz i zarządzaj reklamami na Facebook i Google dla Twoich samochodów z automatyczną optymalizacją i śledzeniem wydajności.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -87,9 +87,9 @@ const Index = () => {
           <Card>
             <CardHeader>
               <Users className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Lead CRM</CardTitle>
+              <CardTitle>CRM dla Potencjalnych Klientów</CardTitle>
               <CardDescription>
-                Track and nurture potential buyers with our built-in CRM designed specifically for car dealerships.
+                Śledź i pielęgnuj potencjalnych nabywców dzięki naszemu wbudowanemu CRM zaprojektowanemu specjalnie dla komisów samochodowych.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -100,46 +100,46 @@ const Index = () => {
       <section 
         className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="relative z-10 text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-white">Built for Small & Medium Dealerships</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-lg">Stworzone dla Małych i Średnich Komisów</h2>
         </div>
         
         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6">Save Hours Every Week</h3>
+          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-xl border">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900">Oszczędzaj Godziny Każdego Tygodnia</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span>No more manually posting cars to multiple platforms</span>
+                <span className="text-primary mr-2 font-bold">✓</span>
+                <span className="text-gray-700">Koniec z ręcznym dodawaniem samochodów na wiele platform</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span>Automated ad creation and optimization</span>
+                <span className="text-primary mr-2 font-bold">✓</span>
+                <span className="text-gray-700">Automatyczne tworzenie i optymalizacja reklam</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span>Centralized lead management and follow-up reminders</span>
+                <span className="text-primary mr-2 font-bold">✓</span>
+                <span className="text-gray-700">Scentralizowane zarządzanie potencjalnymi klientami i przypomnienia</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-2">✓</span>
-                <span>Real-time performance analytics and insights</span>
+                <span className="text-primary mr-2 font-bold">✓</span>
+                <span className="text-gray-700">Analityka wydajności i wglądy w czasie rzeczywistym</span>
               </li>
             </ul>
           </div>
           
-          <div className="bg-background/95 backdrop-blur-sm p-8 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Current Pain Points:</h3>
-            <div className="space-y-3 text-muted-foreground">
-              <p>• Spending hours posting cars manually</p>
-              <p>• Lost leads due to poor follow-up</p>
-              <p>• Ineffective ad campaigns</p>
-              <p>• No centralized system for inventory</p>
+          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-xl border">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">Obecne Problemy:</h3>
+            <div className="space-y-3 text-gray-600">
+              <p>• Spędzanie godzin na ręcznym dodawaniu samochodów</p>
+              <p>• Utraceni klienci z powodu słabego follow-up</p>
+              <p>• Nieskuteczne kampanie reklamowe</p>
+              <p>• Brak scentralizowanego systemu dla inwentarza</p>
             </div>
           </div>
         </div>
@@ -149,26 +149,26 @@ const Index = () => {
       <section id="waitlist" className="px-4 py-16 mx-auto max-w-3xl sm:px-6 lg:px-8">
         <Card>
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Join the Waiting List</CardTitle>
+            <CardTitle className="text-2xl">Dołącz do Listy Oczekujących</CardTitle>
             <CardDescription>
-              Be among the first to access our platform when it launches. Get early access pricing and priority support.
+              Bądź wśród pierwszych, którzy uzyskają dostęp do naszej platformy po jej uruchomieniu. Otrzymaj wczesną cenę dostępu i priorytetowe wsparcie.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleEmailSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email">Adres Email</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="twoj@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
               <Button type="submit" className="w-full" size="lg">
-                Join Waiting List
+                Dołącz do Listy Oczekujących
               </Button>
             </form>
           </CardContent>
@@ -178,7 +178,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 border-t">
         <div className="text-center text-muted-foreground">
-          <p>&copy; 2024 DealershipPro. Built for car dealers, by car industry experts.</p>
+          <p>&copy; 2024 DealerBoost. Stworzone dla dealerów samochodowych, przez ekspertów branży motoryzacyjnej.</p>
         </div>
       </footer>
     </div>
