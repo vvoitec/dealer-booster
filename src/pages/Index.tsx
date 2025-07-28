@@ -36,18 +36,18 @@ const Index = () => {
         <div className="relative z-10 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
             Zautomatyzuj Swoją Komis
-            <span className="text-primary block drop-shadow-lg">Sprzedaż i Marketing</span>
+            <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
           </h1>
           <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
             Importuj samochody z OLX automatycznie, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej platformie all-in-one zaprojektowanej dla małych i średnich komisów samochodowych.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white font-semibold shadow-lg">
+            <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-xl border-2 border-white">
               <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
                 Pomóż Nam To Zbudować <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/90 text-gray-900 border-white hover:bg-white font-semibold shadow-lg" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="outline" size="lg" className="bg-white/95 text-gray-900 border-2 border-white hover:bg-white font-semibold shadow-xl" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
               Dołącz do Listy Oczekujących
             </Button>
           </div>
