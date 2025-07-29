@@ -35,20 +35,20 @@ const Index = () => {
       >
         <div className="relative z-10 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
-            Zautomatyzuj Swoją Komis
+            Zautomatyzuj swój komis
             <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
           </h1>
           <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
-            Importuj samochody z OLX automatycznie, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej platformie all-in-one zaprojektowanej dla małych i średnich komisów samochodowych.
+            Automatycznie importuj ogłoszenia z OLX, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej zintegrowanej platformie zaprojektowanej specjalnie dla komisów samochodowych.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-xl border-2 border-white">
               <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
-                Pomóż Nam To Zbudować <ExternalLink className="ml-2 h-4 w-4" />
+                Pomóż nam to zbudować <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-white/95 text-gray-900 border-2 border-white hover:bg-white font-semibold shadow-xl" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
-              Dołącz do Listy Oczekujących
+              Dołącz do listy oczekujących
             </Button>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Index = () => {
       {/* Features Section */}
       <section className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Wszystko Czego Potrzebujesz do Skalowania Komisu</h2>
+          <h2 className="text-3xl font-bold mb-4">Wszystko czego potrzebujesz do skalowania swojego komisu</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Przestań zarządzać wieloma platformami. Nasze zintegrowane rozwiązanie obsługuje cały Twój lejek sprzedażowy.
           </p>
@@ -67,7 +67,7 @@ const Index = () => {
           <Card>
             <CardHeader>
               <Car className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Automatyczny Import z OLX</CardTitle>
+              <CardTitle>Automatyczny import z OLX</CardTitle>
               <CardDescription>
                 Nigdy więcej ręcznego dodawania samochodów. Nasz system automatycznie importuje i synchronizuje Twój inwentarz z OLX.
               </CardDescription>
@@ -77,9 +77,9 @@ const Index = () => {
           <Card>
             <CardHeader>
               <TrendingUp className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>Zarządzanie Reklamami</CardTitle>
+              <CardTitle>Zarządzanie reklamami</CardTitle>
               <CardDescription>
-                Twórz i zarządzaj reklamami na Facebook i Google dla Twoich samochodów z automatyczną optymalizacją i śledzeniem wydajności.
+                Twórz i zarządzaj reklamami Twoich ogłoszeń na Facebook i Google z automatyczną optymalizacją i śledzeniem wydajności.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -87,9 +87,9 @@ const Index = () => {
           <Card>
             <CardHeader>
               <Users className="h-10 w-10 text-primary mb-2" />
-              <CardTitle>CRM dla Potencjalnych Klientów</CardTitle>
+              <CardTitle>CRM dla potencjalnych klientów</CardTitle>
               <CardDescription>
-                Śledź i pielęgnuj potencjalnych nabywców dzięki naszemu wbudowanemu CRM zaprojektowanemu specjalnie dla komisów samochodowych.
+                Śledź potencjalnych klientów dzięki naszemu wbudowanemu CRM zaprojektowanemu specjalnie dla komisów samochodowych.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -107,12 +107,12 @@ const Index = () => {
         }}
       >
         <div className="relative z-10 text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-lg">Stworzone dla Małych i Średnich Komisów</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-lg">Stworzone dla małych i średnich komisów</h2>
         </div>
         
         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-xl border">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">Oszczędzaj Godziny Każdego Tygodnia</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900">Oszczędzaj godziny każdego tygodnia</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-primary mr-2 font-bold">✓</span>
@@ -134,12 +134,12 @@ const Index = () => {
           </div>
           
           <div className="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-xl border">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900">Obecne Problemy:</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">Obecne problemy:</h3>
             <div className="space-y-3 text-gray-600">
               <p>• Spędzanie godzin na ręcznym dodawaniu samochodów</p>
-              <p>• Utraceni klienci z powodu słabego follow-up</p>
+              <p>• Utrata klientów z powodu braku skutecznego kontaktu po pierwszym zapytaniu</p>
               <p>• Nieskuteczne kampanie reklamowe</p>
-              <p>• Brak scentralizowanego systemu dla inwentarza</p>
+              <p>• Brak scentralizowanego systemu dla inwentarza ogłoszeń</p>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ const Index = () => {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Dołącz do Listy Oczekujących</CardTitle>
             <CardDescription>
-              Bądź wśród pierwszych, którzy uzyskają dostęp do naszej platformy po jej uruchomieniu. Otrzymaj wczesną cenę dostępu i priorytetowe wsparcie.
+              Bądź wśród pierwszych, którzy uzyskają dostęp do naszej platformy po jej uruchomieniu. Otrzymaj cenę wczesnego dostępu i priorytetowe wsparcie.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -168,7 +168,7 @@ const Index = () => {
                 />
               </div>
               <Button type="submit" className="w-full" size="lg">
-                Dołącz do Listy Oczekujących
+                Dołącz do listy oczekujących
               </Button>
             </form>
           </CardContent>
