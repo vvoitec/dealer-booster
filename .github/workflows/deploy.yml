@@ -41,11 +41,11 @@ jobs:
           ls -la
           
           # Copy build files (if they exist)
-          if [ -d "build" ]; then
+          if [ -d "dist" ]; then
             rm -rf out/*
-            cp -r build/* out/
+            cp -r dist/* out/
           else
-            echo "Error: build directory not found. Check your build configuration."
+            echo "Error: dist directory not found. Check your build configuration."
             exit 1
           fi
           
