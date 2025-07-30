@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -24,25 +27,26 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to GitHub Pages (no 3rd-party packages)
+      - name: Deploy to GitHub Pages
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Use token in the clone URL for authentication
-          git clone --branch gh-pages https://${GITHUB_TOKEN}@github.com/${{ github.repository }} out || \
-          git clone https://${GITHUB_TOKEN}@github.com/${{ github.repository }} out && \
-          cd out && \
-          git checkout --orphan gh-pages && \
-          cd ..
-          
-          # Add debug step to check what files were generated
+          # Output directory content for debugging
           echo "Contents of current directory:"
           ls -la
           
-          # Copy build files (if they exist)
+          # Use a different approach for authentication
+          git clone -b gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" out || \
+          git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" out
+          
+          cd out
+          git checkout --orphan gh-pages || git checkout gh-pages || true
+          git rm -rf . || true
+          cd ..
+          
+          # Copy build files
           if [ -d "dist" ]; then
-            rm -rf out/*
             cp -r dist/* out/
           else
             echo "Error: dist directory not found. Check your build configuration."
@@ -51,8 +55,7 @@ jobs:
           
           cd out
           touch .nojekyll
+          
           git add .
-          git commit -m "Deploy React App to GitHub Pages"
-          git push --force https://${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Deploy React App to GitHub Pages" || echo "No changes to commit"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
