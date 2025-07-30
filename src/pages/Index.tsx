@@ -29,7 +29,8 @@ const Index = () => {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/dealer-booster/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
         }}
       >
         <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -134,7 +135,8 @@ const Index = () => {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/dealer-booster/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
         }}
       >
         <div className="relative z-10 text-center mb-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
