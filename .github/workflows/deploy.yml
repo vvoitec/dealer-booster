@@ -28,21 +28,31 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Clone the repository's gh-pages branch into out/
-          git clone --branch gh-pages https://github.com/${{ github.repository }} out || \
-          git clone https://github.com/${{ github.repository }} out && \
+          
+          # Use token in the clone URL for authentication
+          git clone --branch gh-pages https://${GITHUB_TOKEN}@github.com/${{ github.repository }} out || \
+          git clone https://${GITHUB_TOKEN}@github.com/${{ github.repository }} out && \
           cd out && \
           git checkout --orphan gh-pages && \
           cd ..
-
-          rm -rf out/*
-          cp -r build/* out/
+          
+          # Add debug step to check what files were generated
+          echo "Contents of current directory:"
+          ls -la
+          
+          # Copy build files (if they exist)
+          if [ -d "build" ]; then
+            rm -rf out/*
+            cp -r build/* out/
+          else
+            echo "Error: build directory not found. Check your build configuration."
+            exit 1
+          fi
           
           cd out
-          touch .nojekyll  # allow files/folders starting with _
+          touch .nojekyll
           git add .
           git commit -m "Deploy React App to GitHub Pages"
-          git push --force origin gh-pages
+          git push --force https://${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
