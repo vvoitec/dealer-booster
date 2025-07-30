@@ -33,23 +33,56 @@ const Index = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="relative z-10 text-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
-            Zautomatyzuj swój komis
-            <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
-          </h1>
-          <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
-            Automatycznie importuj ogłoszenia z OLX, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej zintegrowanej platformie zaprojektowanej specjalnie dla komisów samochodowych.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-xl border-2 border-white">
-              <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
-                Pomóż nam to zbudować <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-white/95 text-gray-900 border-2 border-white hover:bg-white font-semibold shadow-xl" onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}>
-              Dołącz do listy oczekujących
-            </Button>
+        <div className="relative z-10 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Main content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
+                Zautomatyzuj swój komis
+                <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
+              </h1>
+              <p className="text-xl text-gray-100 mb-8 drop-shadow-md">
+                Automatycznie importuj ogłoszenia z OLX, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej zintegrowanej platformie zaprojektowanej specjalnie dla komisów samochodowych.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-xl border-2 border-white">
+                  <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
+                    Pomóż nam to zbudować <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right side - Waiting list form */}
+            <div className="flex justify-center lg:justify-end">
+              <Card className="w-full max-w-md bg-white/95 backdrop-blur-sm shadow-xl border-2 border-white">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-gray-900">Dołącz do Listy Oczekujących</CardTitle>
+                  <CardDescription className="text-gray-700">
+                    Bądź wśród pierwszych, którzy uzyskają dostęp do naszej platformy po jej uruchomieniu. Otrzymaj cenę wczesnego dostępu i priorytetowe wsparcie.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleEmailSubmit} className="space-y-4">
+                    <div>
+                      <Label htmlFor="email" className="text-gray-900">Adres Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="twoj@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="bg-white"
+                      />
+                    </div>
+                    <Button type="submit" className="w-full" size="lg">
+                      Dołącz do listy oczekujących
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -145,35 +178,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Waiting List Section */}
-      <section id="waitlist" className="px-4 py-16 mx-auto max-w-3xl sm:px-6 lg:px-8">
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Dołącz do Listy Oczekujących</CardTitle>
-            <CardDescription>
-              Bądź wśród pierwszych, którzy uzyskają dostęp do naszej platformy po jej uruchomieniu. Otrzymaj cenę wczesnego dostępu i priorytetowe wsparcie.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleEmailSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="email">Adres Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="twoj@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full" size="lg">
-                Dołącz do listy oczekujących
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </section>
 
       {/* Footer */}
       <footer className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 border-t">
