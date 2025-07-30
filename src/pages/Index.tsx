@@ -54,8 +54,8 @@ const Index = () => {
             </div>
 
             {/* Right side - Waiting list form */}
-            <div className="flex justify-center lg:justify-end">
-              <Card className="w-full max-w-md bg-white/95 backdrop-blur-sm shadow-xl border-2 border-white">
+            <div className="flex justify-center lg:justify-end w-full">
+              <Card className="w-full lg:max-w-md bg-white/95 backdrop-blur-sm shadow-xl border-2 border-white">
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-gray-900">Dołącz do Listy Oczekujących</CardTitle>
                   <CardDescription className="text-gray-700">
