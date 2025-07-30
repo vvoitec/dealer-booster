@@ -27,7 +27,7 @@ const Index = () => {
       <section 
         className="relative w-full py-16 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/dealer-booster/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -133,7 +133,7 @@ const Index = () => {
       <section 
         className="relative w-full py-16 overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/dealer-booster/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
