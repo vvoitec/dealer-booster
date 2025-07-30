@@ -39,13 +39,13 @@ const Index = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
                 Zautomatyzuj swój komis
-                <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
+                <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border border-white/40">Sprzedaż i Marketing</span>
               </h1>
               <p className="text-xl text-gray-100 mb-8 drop-shadow-md">
                 Automatycznie importuj ogłoszenia z OLX, zarządzaj reklamami na Facebook i Google, śledź potencjalnych klientów dzięki naszej zintegrowanej platformie zaprojektowanej specjalnie dla komisów samochodowych.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" asChild className="bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-xl border-2 border-white">
+              <div className="w-full">
+                <Button size="lg" asChild className="w-full bg-white hover:bg-gray-100 text-gray-900 font-bold shadow-xl border-2 border-white">
                   <a href="https://forms.google.com/your-survey-link" target="_blank" rel="noopener noreferrer">
                     Pomóż nam to zbudować <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
