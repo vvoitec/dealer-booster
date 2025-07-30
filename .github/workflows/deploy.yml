@@ -1,0 +1,48 @@
+name: Deploy React App to GitHub Pages (Custom Domain)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages (no 3rd-party packages)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Clone the repository's gh-pages branch into out/
+          git clone --branch gh-pages https://github.com/${{ github.repository }} out || \
+          git clone https://github.com/${{ github.repository }} out && \
+          cd out && \
+          git checkout --orphan gh-pages && \
+          cd ..
+
+          rm -rf out/*
+          cp -r build/* out/
+          
+          cd out
+          touch .nojekyll  # allow files/folders starting with _
+          git add .
+          git commit -m "Deploy React App to GitHub Pages"
+          git push --force origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
