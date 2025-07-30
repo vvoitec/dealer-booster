@@ -25,7 +25,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section 
-        className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
+        className="relative w-full py-16 overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/d74231e7-bd36-408d-9de6-c48d62d8ebbe.png')`,
           backgroundSize: 'cover',
@@ -33,7 +33,7 @@ const Index = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="relative z-10 text-center">
+        <div className="relative z-10 text-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
             Zautomatyzuj swój komis
             <span className="block drop-shadow-lg bg-primary/90 text-white px-4 py-2 rounded-lg inline-block mt-2 border-2 border-white">Sprzedaż i Marketing</span>
@@ -98,7 +98,7 @@ const Index = () => {
 
       {/* Benefits Section */}
       <section 
-        className="relative px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden"
+        className="relative w-full py-16 overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/lovable-uploads/1747c0cf-a44e-4ae9-af60-aae6a929cd54.png')`,
           backgroundSize: 'cover',
@@ -106,11 +106,11 @@ const Index = () => {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="relative z-10 text-center mb-12">
+        <div className="relative z-10 text-center mb-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-4 text-white drop-shadow-lg">Stworzone dla małych i średnich komisów</h2>
         </div>
         
-        <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="bg-white/95 backdrop-blur-sm p-8 rounded-lg shadow-xl border">
             <h3 className="text-2xl font-semibold mb-6 text-gray-900">Oszczędzaj godziny każdego tygodnia</h3>
             <ul className="space-y-4">
